@@ -6,14 +6,19 @@
   "dependencies": {
     "bootstrap": "5.3.2",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.10.1",
     "react-dom": "^18.2.0",
+    "react-select": "^5.8.0",
     "react-window": "^1.8.10",
+    "react-windowed-select": "^5.2.0",
     "web-vitals": "^2.1.0"
   },
   "devDependencies": {
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
+    "@types/react-select": "^5.0.1",
+    "@types/react-window": "^1.8.8",
     "browserslist": "^4.22.3",
     "postcss": "^8.4.33",
     "postcss-flexbugs-fixes": "^5.0.2",

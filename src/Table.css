@@ -1,0 +1,24 @@
+
+.Table {
+  margin: 10px;
+  background-color: #c22929;
+  border: 3px solid #d6d6d6;
+}
+
+.Table Col {
+  margin: 3px;
+  text-align: left;
+}
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.btn-flat {
+      background-color: purple;
+      color: white;
+    }

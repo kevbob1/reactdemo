@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
-import Button from 'react-bootstrap/Button';
 import { Table } from './Table';
+import { DataSelector } from './DataSelector';
 
 function App() {
   return (
     <div className="App container">
       ha
-      <Table />
+      <DataSelector />
     </div>
   );
 }

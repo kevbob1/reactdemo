@@ -1,11 +1,29 @@
 .App {
   text-align: left;
   background-color: aqua;
-  max-width: 400px;
-  max-height: 400px;
+  height: 100vh;
+}
+
+.bms-select {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px;
+  width: 300px;
+
+}
+
+.bms__control {
+  background-color: rgb(104, 230, 58);
+  height: 200px;
   overflow: auto;
 }
 
+
+.bms__value-container {
+  background-color: rgb(42, 119, 119);
+}
 
 
 @media (prefers-reduced-motion: no-preference) {

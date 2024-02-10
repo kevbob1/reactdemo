@@ -1,5 +1,11 @@
+import { CSSProperties } from 'react';
 import React from 'react';
 import data from './data/stuff.json'
+import { FixedSizeList, ListChildComponentProps } from 'react-window';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import './Table.css'
 
 type RowItem = {
 	_id: string;
@@ -10,28 +16,33 @@ type RowItem = {
 	registered: string;
 };
 
-type DataTable = {
-	items: RowItem[];
-};
+type DataTable = RowItem[];
 
 
-const TableRow = ({ item }: {item:RowItem}): React.JSX.Element => {
+const TableRow = ({  index, style, data  }: ListChildComponentProps<DataTable>): React.JSX.Element => {
+	const item:RowItem = data[index];
+	console.log("rendering row", item.index);
 	return (
-		<tr>
-			<td>{item.index}</td>
-			<td>{item.name}</td>
-			<td>{item.company}</td>
-		</tr>
+		<Row style={style}>
+			<Col>{item.index}</Col>
+			<Col>{item.name}</Col>
+			<Col>{item.company}</Col>
+		</Row>
 	);
 }
 
 export const Table = (): React.JSX.Element => {
-	const clzz = '';
 	return (
-	  <table className='table table-primary'>
-			<tbody>
-				{data.map((item: RowItem) => <TableRow item={item} key={item._id} />)}
-			</tbody>
-    </table>
+		<Container className="Table">
+			<FixedSizeList
+		    height={500}
+  		  width={"90%"}
+				itemSize={30}
+    		itemCount={data.length}
+				itemData={data}
+  		>
+  		  {TableRow}
+  		</FixedSizeList>
+    </Container>
 	);
 }
